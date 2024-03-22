@@ -68,7 +68,7 @@ resource "aws_instance" "instance1" {
   instance_type = "t2.micro"
   subnet_id = aws_subnet.public-sb.id
   vpc_security_group_ids = [aws_security_group.instance-sg.id]
-  key_name = aws_key_pair.hanvi.id
+  key_name = "hanvi"
   tags= {
     Name= " instance1"
   }
@@ -82,7 +82,7 @@ resource "aws_instance" "instance2" {
   instance_type = "t2.micro"
   subnet_id = aws_subnet.public-sb.id
   vpc_security_group_ids = [aws_security_group.instance-sg.id]
-  key_name = aws_key_pair.hanvi.id
+  key_name = "hanvi"
   tags= {
     Name= " instance2"
   }
@@ -96,7 +96,7 @@ resource "aws_instance" "instance3" {
   instance_type = "t2.micro"
   subnet_id = aws_subnet.public-sb.id
   vpc_security_group_ids = [aws_security_group.instance-sg.id]
-  key_name = aws_key_pair.hanvi.id
+  key_name = "hanvi"
   tags= {
     Name= " instance3"
   }
@@ -105,7 +105,4 @@ resource "aws_eip" "eip3"{
     domain = "vpc"
     instance = aws_instance.instance3.id
   }
-resource "aws_key_pair" "hanvi" {
-  key_name = "hanvi"
-  public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDnDHGNxTbiVosk7ksbGkMSDoXLFFjc1cqsL2HyLr/oARySkhqoQoOfwiL6hKGuU6wpYoVGz15au4QY4zxtUA80ne7Jt5f9UUwaPSwjtHbchW0pK1SZL+tXbA/ugaJSCJJ2FAhrXUqMP1XWddcei79YoVkNqaHk3vnYrYlqdRykRhZcKpLEVdTE6803Ff9jFIfqs30H3qdMt2wE43WHIfoW5IN1TWAF1881uMBc/CBliT3dhhzTPqMuxW9p/7kL91LSCyRTblpmkSH373VROXaq0/aGuOF+N+Tpy/34q7RT2im6Yen0M0W/RD9Pwlfvna5R4Y9iFY+/Vs0QtB5m6ySQeg6k1hcrDdNnNHtiMCrwKahCXVwK2gIN8M7iUuFosedU0nNs4C2zCPRG5J0wggJy3tg02Z7TsvWm1aubL8SOuAPAyZE/gU+B5zuQu9aoKBh32OSz7CjCIhc79RmGC9o3XDSzm84TFrq9SkcrJnbFNUakNIkVaaTA+ipuLXYR4YE= ubuntu@ip-172-31-2-91"
-}
+
