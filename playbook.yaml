@@ -1,5 +1,4 @@
 ---
-
 - name: Install Apache on Slave-1
   hosts: slave1	
   become: true
