@@ -18,5 +18,5 @@
   tasks:
   - name: Installing latest ngnix
     apt:
-      name: ngnix
+      name: nginx
       state: present
