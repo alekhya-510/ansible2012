@@ -1,10 +1,4 @@
 ---
-- name : installing tools on slave1
-  hosts: slave1
-  become: true
-  tasks:
-   - name: executing nginx script
-     script: slave1.sh
 - name: installing tools on slave2
   hosts: slave2
   become: true
