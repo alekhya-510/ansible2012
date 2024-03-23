@@ -1,0 +1,27 @@
+---
+
+- name: Install Apache on Slave-1
+  hosts: slave1	
+  become: true
+  tasks:
+  - name: Installing latest Apache
+    apt:
+      name: apache2
+      state: present
+  - name: Start Apache service 
+    service:	
+      name: apache2
+      state: started
+
+- name: Install ngnix on Slave-2
+  hosts: slave2
+  become: true
+  tasks:
+  - name: Installing latest ngnix
+    apt:
+      name: ngnix
+      state: present
+  - name: Start ngnix service 
+    service:	
+      name: ngnix
+      state: started
