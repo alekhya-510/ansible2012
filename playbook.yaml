@@ -20,7 +20,3 @@
     apt:
       name: ngnix
       state: present
-  - name: Start ngnix service 
-    service:	
-      name: ngnix
-      state: started
