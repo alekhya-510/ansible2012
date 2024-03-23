@@ -1,6 +1,6 @@
 ---
 - name: Install Apache on Slave-1
-  hosts: slave1	
+  hosts: 52.23.138.95
   become: true
   tasks:
   - name: Installing latest Apache
@@ -13,7 +13,7 @@
       state: started
 
 - name: Install ngnix on Slave-2
-  hosts: slave2
+  hosts: 34.226.125.133
   become: true
   tasks:
   - name: Installing latest ngnix
