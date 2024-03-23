@@ -1,2 +1,2 @@
-slave1 52.23.138.95 ansible-user=ubuntu
-slave2 34.226.125.133 ansible-user=ubuntu
+slave1 ansible_host=52.23.138.95
+slave2 ansible_host=34.226.125.133
