@@ -1,0 +1,7 @@
+---
+- hosts : slave1
+  tasks:
+   - name: nginx installation
+     apt:
+      name: nginx
+      state: present
